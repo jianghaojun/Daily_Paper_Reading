@@ -40,6 +40,24 @@
     - Main Idea: better multi-modal fusion strategy with pixel-wise correlation and multi-stage cross-modal decoder.
     - Take away message: fusion is very important for multi-modal learning.
     <p align="center"> <img src='images/20220508_VLTVG.png' align="center" height="250px"> </p>
+
+    2.<u> COOPERNAUT: End-to-End Driving with Cooperative Perception for Networked Vehicles. CVPR 2022.</u> Cui, Jiaxun, et al. The University of Texas at Austin.  [[PDF]](https://arxiv.org/pdf/2205.02222.pdf)  [[Code]](https://github.com/UT-Austin-RPL/Coopernaut) [[Website]](https://ut-austin-rpl.github.io/Coopernaut/)
+    - Main Idea: incorporate the visual information (point-cloud) from other vehicles to improve the success rate in challenging driving situations.
+    - Experiments: 40% improvement in average success rate over egocentric driving models in these challenging driving situations.
+    - Take away message: a interesting task.
+    <p align="center"> <img src='images/20220508_COOP.png' align="center" height="250px"> </p>
+
+    3.<u> Language Models Can See: Plugging Visual Controls in Text Generation. Submit to NeurIPS 2022.</u> Sun, Yixuan, et al. University of Cambridge. [[PDF]](https://arxiv.org/pdf/2205.02655.pdf) [[Code]](https://github.com/yxuansu/MAGIC)
+    - Main Idea: combines an off-the-shelf LM (i.e., GPT-2) and an image-text matching model (i.e., CLIP) for image-grounded text generation.
+    - Take away message: previous works mainly use CLIP to generate images with the guide of provided language, this work uses CLIP in a opposite way.
+    <p align="center"> <img src='images/20220508_MAGIC.gif' align="center" height="250px"> </p>
+
+    4.<u> All You May Need for VQA are Image Captions.</u>  Changpinyo, Soravit, et al. Google. [[PDF]](https://arxiv.org/pdf/2205.01883.pdf)
+    - Main Idea: generate questions from the image caption.
+    - Take away message: none.
+    <p align="center"> <img src='images/20220508_VQA.png' align="center" height="250px"> </p>
+    
+
 Pending...
 
 
