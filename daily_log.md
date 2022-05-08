@@ -36,6 +36,10 @@
 
 - **2022/05/08, Sunday.**
 
+    1.<u> Improving Visual Grounding with Visual-Linguistic Verification and Iterative Reasoning. CVPR 2022.</u> Yang, Li, et al. CAS.  [[PDF]](https://arxiv.org/pdf/2205.00272.pdf)  [[Code]](https://github.com/yangli18/VLTVG)
+    - Main Idea: better multi-modal fusion strategy with pixel-wise correlation and multi-stage cross-modal decoder.
+    - Take away message: fusion is very important for multi-modal learning.
+    <p align="center"> <img src='images/20220508_VLTVG.png' align="center" height="250px"> </p>
 Pending...
 
 
