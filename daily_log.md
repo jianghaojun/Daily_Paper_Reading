@@ -36,12 +36,12 @@
 
 - **2022/05/08, Sunday.**
 
-    1.<u> Improving Visual Grounding with Visual-Linguistic Verification and Iterative Reasoning. CVPR 2022.</u> Yang, Li, et al. CAS.  [[PDF]](https://arxiv.org/pdf/2205.00272.pdf)  [[Code]](https://github.com/yangli18/VLTVG)
+    1.<u> Improving Visual Grounding with Visual-Linguistic Verification and Iterative Reasoning. CVPR 2022.</u> Yang, Li, et al. CAS. [[PDF]](https://arxiv.org/pdf/2205.00272.pdf) [[Code]](https://github.com/yangli18/VLTVG)
     - Main Idea: better multi-modal fusion strategy with pixel-wise correlation and multi-stage cross-modal decoder.
     - Take away message: fusion is very important for multi-modal learning.
     <p align="center"> <img src='images/20220508_VLTVG.png' align="center" height="250px"> </p>
 
-    2.<u> COOPERNAUT: End-to-End Driving with Cooperative Perception for Networked Vehicles. CVPR 2022.</u> Cui, Jiaxun, et al. The University of Texas at Austin.  [[PDF]](https://arxiv.org/pdf/2205.02222.pdf)  [[Code]](https://github.com/UT-Austin-RPL/Coopernaut) [[Website]](https://ut-austin-rpl.github.io/Coopernaut/)
+    2.<u> COOPERNAUT: End-to-End Driving with Cooperative Perception for Networked Vehicles. CVPR 2022.</u> Cui, Jiaxun, et al. The University of Texas at Austin. [[PDF]](https://arxiv.org/pdf/2205.02222.pdf) [[Code]](https://github.com/UT-Austin-RPL/Coopernaut) [[Website]](https://ut-austin-rpl.github.io/Coopernaut/)
     - Main Idea: incorporate the visual information (point-cloud) from other vehicles to improve the success rate in challenging driving situations.
     - Experiments: 40% improvement in average success rate over egocentric driving models in these challenging driving situations.
     - Take away message: a interesting task.
@@ -57,6 +57,32 @@
     - Take away message: none.
     <p align="center"> <img src='images/20220508_VQA.png' align="center" height="250px"> </p>
     
+- **2022/05/09, Monday.**
+
+    1.<u> Inferring and Executing Programs for Visual Reasoning. ICCV 2017.</u> Johnson, Justin, et al. UC Berkeley. [[PDF]](https://arxiv.org/pdf/1705.03633.pdf) [[Code]](https://github.com/yangli18/VLTVG)
+    - Main Idea: Specialize neural modules to execute different kind visual reasoning.
+    <p align="center"> <img src='images/20220509_INFER.png' align="center" height="250px"> </p>
+
+- **2022/05/10, Monday.**
+
+    1.<u> SwapMix: Diagnosing and Regularizing the Over-Reliance on Visual Context in Visual Question Answering. CVPR 2022.</u> Gupta, Vipul, et al. U Penn. [[PDF]](https://arxiv.org/pdf/2204.02285.pdf) [[Code]](https://github.com/vipulgupta1011/swapmix)
+    - Main Idea: Investigate the over-reliance on unrelate visual content for VQA models. 
+    - Methods: Replace the unrelated visual content with similar objects and test the performance of VQA models. Also, the replacing can also be applied as a data augmentation which boost the robustness of VQA models.
+    - Take away message: the robustness of multi-modal models can be impacted by visual content.
+    <p align="center"> <img src='images/20220510_SwapMix.png' align="center" height="250px"> </p>
+
+    2.<u> Words Aren’t Enough, Their Order Matters: On the Robustness of Grounding Visual Referring Expressions. ACL 2020.</u> Walmer, Matthew, et al. U Maryland. [[PDF]](https://arxiv.org/pdf/2112.07668.pdf) [[Code]](https://github.com/SRI-CSL/TrinityMultimodalTrojAI)
+    - Main Idea: models do not change their answer when the order of words in a sentence changed.
+    
+    3.<u> Visual Spatial Reasoning. arXiv 2022/4/30.</u> Liu, Fangyu, et al. U 8888888888999999995
+    `[[PDF]](https://arxiv.org/pdf/2205.00363.pdf) [[Code]](https://github.com/cambridgeltl/visual-spatial-reasoning)
+    - Main Idea: Build a visual spatial dataset to investigate the visual spatial reasoning ability of VL models. 
+    - Take away message: a large gap between human and model performance (human ceiling on the VSR task is above 95% and models only achieve around 70%).
+
+    4.<u> **Dual-Key Multimodal Backdoors for Visual Question Answering. CVPR 2022 **.</u> Walmer, Matthew, et al. U Maryland. [[PDF]](https://arxiv.org/pdf/2112.07668.pdf) [[Code]](https://github.com/SRI-CSL/TrinityMultimodalTrojAI)
+    - Main Idea: Training the VQA models with multimodal backdoors. The backdoor will only be activated when triggers in both modalities are present. 
+    - Take away message: TrojVQA is a large collection of clean and trojan VQA models to enable research in defending against multimodal backdoors.
+    <p align="center"> <img src='images/20220510_TrojVQA.png' align="center" height="250px"> </p>
 
 Pending...
 
