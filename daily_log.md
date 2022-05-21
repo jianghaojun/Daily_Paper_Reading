@@ -63,7 +63,7 @@
     - Main Idea: Specialize neural modules to execute different kind visual reasoning.
     <p align="center"> <img src='images/20220509_INFER.png' align="center" height="250px"> </p>
 
-- **2022/05/10, Monday.**
+- **2022/05/10, Tuesday.**
 
     1.<u> SwapMix: Diagnosing and Regularizing the Over-Reliance on Visual Context in Visual Question Answering. CVPR 2022.</u> Gupta, Vipul, et al. U Penn. [[PDF]](https://arxiv.org/pdf/2204.02285.pdf) [[Code]](https://github.com/vipulgupta1011/swapmix)
     - Main Idea: Investigate the over-reliance on unrelate visual content for VQA models. 
@@ -74,18 +74,35 @@
     2.<u> Words Aren’t Enough, Their Order Matters: On the Robustness of Grounding Visual Referring Expressions. ACL 2020.</u> Walmer, Matthew, et al. U Maryland. [[PDF]](https://arxiv.org/pdf/2112.07668.pdf) [[Code]](https://github.com/SRI-CSL/TrinityMultimodalTrojAI)
     - Main Idea: models do not change their answer when the order of words in a sentence changed.
     
-    3.<u> Visual Spatial Reasoning. arXiv 2022/4/30.</u> Liu, Fangyu, et al. U 8888888888999999995
-    `[[PDF]](https://arxiv.org/pdf/2205.00363.pdf) [[Code]](https://github.com/cambridgeltl/visual-spatial-reasoning)
-    - Main Idea: Build a visual spatial dataset to investigate the visual spatial reasoning ability of VL models. 
+    3.<u> Visual Spatial Reasoning. arXiv 2022/4/30.</u> Liu, Fangyu, et al. U Cambridge. [[PDF]](https://arxiv.org/pdf/2205.00363.pdf) [[Code]](https://github.com/cambridgeltl/visual-spatial-reasoning)
+    - Main Idea: Build a 2D visual spatial dataset to investigate the visual spatial reasoning ability of VL models. 
     - Take away message: a large gap between human and model performance (human ceiling on the VSR task is above 95% and models only achieve around 70%).
 
-    4.<u> **Dual-Key Multimodal Backdoors for Visual Question Answering. CVPR 2022 **.</u> Walmer, Matthew, et al. U Maryland. [[PDF]](https://arxiv.org/pdf/2112.07668.pdf) [[Code]](https://github.com/SRI-CSL/TrinityMultimodalTrojAI)
+    4.<u> **Dual-Key Multimodal Backdoors for Visual Question Answering. CVPR 2022**.</u> Walmer, Matthew, et al. U Maryland. [[PDF]](https://arxiv.org/pdf/2112.07668.pdf) [[Code]](https://github.com/SRI-CSL/TrinityMultimodalTrojAI)
     - Main Idea: Training the VQA models with multimodal backdoors. The backdoor will only be activated when triggers in both modalities are present. 
     - Take away message: TrojVQA is a large collection of clean and trojan VQA models to enable research in defending against multimodal backdoors.
     <p align="center"> <img src='images/20220510_TrojVQA.png' align="center" height="250px"> </p>
 
+- **2022/05/14, Saturday.**
+
+    1.<u> Making Better Mistakes: Leveraging Class Hierarchies with Deep Networks.</u> Bertinetto, Luca, et al. Five AI. [[PDF]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Bertinetto_Making_Better_Mistakes_Leveraging_Class_Hierarchies_With_Deep_Networks_CVPR_2020_paper.pdf) [[Code]](https://github.com/fiveai/making-better-mistakes)
+    - Main Idea: Leveraging class hierarchies to make better mistakes on image classification.
+    - Take away message: Although top-1 acc is improving, the severity(stupidity) of mistake is fairly unchanged.
+
+- **2022/05/15 - 2022/05/20, Rushing NeurIPS.**
+
+- **2022/05/21, Saturday.**
+
+    1.<u> **Open-Vocabulary Object Detection Using Captions. CVPR 2021 Oral**.</u> Zareian, Alireza, et al. U Columbia. [[PDF]](https://arxiv.org/pdf/2011.10678.pdf) [[Code]](https://github.com/alirezazareian/ovr-cnn)
+    - Main Idea: Pre-train the visual backbone with image-text pairs which is easy to access from web to learn the visual semantics about diverse classes(include classes which do not have box annotation). 
+    <p align="center"> <img src='images/20220521_OpenDetect.png' align="center" height="250px"> </p>
+
+    2.<u> ScanQA: 3D Question Answering for Spatial Scene Understanding. CVPR 2022.</u> Azuma Daichi, Alireza, et al. U Columbia. [[PDF]](https://arxiv.org/pdf/2112.10482.pdf) [[Code]](https://github.com/ATR-DBI/ScanQA)
+    - Main Idea: Introduce a 3D-QA dataset with question-answer pair and correspoinding box annotations.
+    - Limitation: The annotations are derived from the ScanNet dataset using question generation models.
+    - Notes:
+        - Surprisingly, the randomimage+2D-QA models performs quite well.
+    - Take away message: Object classification and localization both help the question-answering task.
+    <p align="center"> <img src='images/20220521_ScanQA.png' align="center" height="250px"> </p>
+
 Pending...
-
-
-
-
