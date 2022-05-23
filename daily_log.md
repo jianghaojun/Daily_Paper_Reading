@@ -105,4 +105,35 @@
     - Take away message: Object classification and localization both help the question-answering task.
     <p align="center"> <img src='images/20220521_ScanQA.png' align="center" height="250px"> </p>
 
+- **2022/05/22, Sunday.**
+    1.<u> Bottom-Up and Top-Down Attention for Image Captioning
+    and Visual Question Answering. CVPR 2018 Oral.</u> Yu, Zhou, et al. Hangzhou Dianzi U. [[PDF]](https://arxiv.org/pdf/1707.07998.pdf) [[Code]](https://github.com/peteanderson80/bottom-up-attention)
+    - Main Idea: Bottom-up attention with top-down attention. Bottom-up means purely visual feed-forward attention mechanisms. Top-down means task-specific attention, *e.g.*, given a query "looking for ball".
+    - Method: Implementing the bottom-up attention by pre-training a FasterRCNN on Visual Genome dataset. The top-down attention is specifically designed for different tasks.
+    - Notes: This a common strategy.
+
+    2.<u> D3Net: A Speaker-Listener Architecture for Semi-supervised Dense Captioning and Visual Grounding in RGB-D Scans. arXiv 2021/12/2.</u> Chen, Zhenyu, et al. [[PDF]](https://arxiv.org/pdf/2112.01551.pdf) [[Code]](https://github.com/daveredrum/D3Net)
+    - Main Idea: Design a speaker-listener architecture, speaker have to generate discriminative descriptions so that listener can better localize the described targets.
+    - Method: Training by reinforce algorithm.
+    - Take away message: Fine-tuning a 3D detector is essential to get good performance.
+    <p align="center"> <img src='images/20220522_D3Net.png' align="center" height="250px"> </p>
+
+    3.<u> Declaration-based Prompt Tuning for Visual Question Answering. IJCAI 2022.</u> Liu, Yuhang, et al. Huazhong University of Science and Technology. [[PDF]](https://arxiv.org/pdf/2205.02456.pdf) [[Code]](https://github.com/CCIIPLab/DPT)
+    - Main Idea: Reformulate the VQA training objective to MLM and ITM, and then transform the question to a declaration type which both close the gap between the pre-training and fine-tuning.
+    - Method: Training by reinforce algorithm.
+    - Take away message: Similar objectives used in fine-tuning will help to transfer the knowledge learned in pre-training.
+    <p align="center"> <img src='images/20220522_DPT.png' align="center" height="250px"> </p>
+
+    4.<u> Answer-Me: Multi-Task Open-Vocabulary Visual Question Answering. arXiv 2022/5/2.</u> Piergiovanni, AJ, et al. Google Research. [[PDF]](https://arxiv.org/pdf/2205.00949.pdf) [Code Not Found]
+    - Main Idea: Design a multi-task task-aware general framework which is able to deal with open-vocabulary VQA.
+    - Method: Pre-train with a encoder-decoder architecture.
+    - Take away message: semantically related tasks benefit from multi-task training as visual linguistic concepts are shared, helping their co-training.
+    <p align="center"> <img src='images/20220522_AnswerMe.png' align="center" height="250px"> </p>
+
+    5.<u> Rethinking Diversified and Discriminative Proposal Generation for Visual Grounding. IJCAI 2018.</u> Yu, Zhou, et al. Hangzhou Dianzi U. [[PDF]](https://arxiv.org/pdf/1805.03508.pdf) [[Code]](https://github.com/XiangChenchao/DDPN)
+    - Main Idea: Generated proposals should be diversified and discriminative simultaneously: 1) the proposals of all images should be diversified to detect objects from open-vocabulary classes, and 2) the proposals of an individual image should be discriminative to guarantee that the proposals and visual features accurately represent the true semantic.
+    - Method: Pretraining the object detector on Visual Genome dataset, emmmm.
+    - Limitation: The story is attractive, however, the method is really have nothing to say.
+    - Take away message: Soft label help the performance a lot, as show in Table 2.
+
 Pending...
