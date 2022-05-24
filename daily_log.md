@@ -75,8 +75,13 @@
     - Main Idea: models do not change their answer when the order of words in a sentence changed.
     
     3.<u> Visual Spatial Reasoning. arXiv 2022/4/30.</u> Liu, Fangyu, et al. U Cambridge. [[PDF]](https://arxiv.org/pdf/2205.00363.pdf) [[Code]](https://github.com/cambridgeltl/visual-spatial-reasoning)
-    - Main Idea: Build a 2D visual spatial dataset to investigate the visual spatial reasoning ability of VL models. 
-    - Take away message: a large gap between human and model performance (human ceiling on the VSR task is above 95% and models only achieve around 70%).
+    - Main Idea: Build a 2D visual spatial reasoning(VSR) dataset to investigate the visual spatial reasoning ability of VL models. 
+    - Dataset details:
+        - 65 spatial relations and has more than 10k(10,119) data points, using 6940 image from MSCOCO.
+    - Take away message: 
+        - positional encodings are extremely important for VSR task.
+        - models' by-relation performance barely correlates with the number of training examples.
+        - a large gap between human and model performance (human ceiling on the VSR task is above 95% and models only achieve around 70%).
 
     4.<u> **Dual-Key Multimodal Backdoors for Visual Question Answering. CVPR 2022**.</u> Walmer, Matthew, et al. U Maryland. [[PDF]](https://arxiv.org/pdf/2112.07668.pdf) [[Code]](https://github.com/SRI-CSL/TrinityMultimodalTrojAI)
     - Main Idea: Training the VQA models with multimodal backdoors. The backdoor will only be activated when triggers in both modalities are present. 
@@ -135,5 +140,11 @@
     - Method: Pretraining the object detector on Visual Genome dataset, emmmm.
     - Limitation: The story is attractive, however, the method is really have nothing to say.
     - Take away message: Soft label help the performance a lot, as show in Table 2.
+
+- **2022/05/23, Monday.**
+    1.<u> Weakly Supervised Relative Spatial Reasoning for Visual Question Answering. ICCV 2021.</u> Banerjee, Pratyay, et al. Arizona State University. [[PDF]](https://arxiv.org/pdf/2109.01934.pdf) [[Code]](https://github.com/pratyay-banerjee/weak_sup_vqa)
+    - Main Idea: Incoporating the object centroid estimation(OCE) and relative position estimation(RPE) task with 2D Visual Question Answering task to enhance the spatial reasoning ability of visual model.
+    - Take away message: Formulating the OCE and RPE as regression task will fail. In contrast, formulating them as bin-classification task will success!
+    <p align="center"> <img src='images/20220523_VQA-SR.png' align="center" height="250px"> </p>
 
 Pending...
