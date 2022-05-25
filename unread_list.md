@@ -9,21 +9,15 @@
 ## 2022
 ### 2022/05
 
-- **2022/05/21, Saturday.**
+- **2022/05/25, Wednesday.**
 
-    x.<u> Learning to Prompt for Open-Vocabulary Object Detection withVision-Language Model. CVPR 2022.</u> Zareian, Alireza, et al. U Columbia. [[PDF]](https://arxiv.org/pdf/2203.14940.pdf) [[Code]](https://github.com/dyabel/detpro)
-    - Main Idea: Pre-train the visual backbone with image-text pairs which is easy to access from web to learn the visual semantics about diverse classes(include classes which do not have box annotation). 
-    <p align="center"> <img src='images/20220521_OpenDetect.png' align="center" height="250px"> </p>
+    1. Efficient Visual Pretraining with Contrastive Detection. ICCV 2021.
+    2. Contrastive Multimodal Fusion with TupleInfoNCE. ICCV 2021.
+    3. P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding. arXiv.
+    4. Continual Learning of Semantic Segmentation using Complementary 2D-3D Data Representations. arXiv 2021/11 under review of ICRA 2022.
+    5. Weakly-Supervised End-to-End CAD Retrieval to Scan Objects. arXiv 2022/03.
+    6. Multimodal Semi-Supervised Learning for 3D Objects. BMVC 2021.
 
-    x.<u> Declaration-based Prompt Tuning for Visual Question Answering. IJCAI 2022.</u> Liu, Yuhang, et al. Huazhong U. [[PDF]](https://arxiv.org/pdf/2205.02456.pdf) [[Code]](https://github.com/CCIIPLab/DPT)
-    - Main Idea:
-    - Take away message:
-    <p align="center"> <img src='images/20220510_TrojVQA.png' align="center" height="250px"> </p>
-
-    x.<u> Spatiality-guided Transformer for 3D Dense Captioning on Point Clouds. IJCAI 2022.</u> Wang, Heng, et al. U Sydney. [[PDF]](https://arxiv.org/pdf/2204.10688.pdf) [[Code]](https://github.com/heng-hw/SpaCap3D)
-    - Main Idea:
-    - Take away message:
-    <p align="center"> <img src='images/20220510_TrojVQA.png' align="center" height="250px"> </p>
 
 Pending...
 
