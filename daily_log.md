@@ -176,6 +176,7 @@
 
     27. <u> Learning from 2D: Contrastive Pixel-to-Point Knowledge Transfer for 3D Pretraining (2D help 3D). arXiv 2021/04.</u> Liu, Yueh-Cheng, et al. National Taiwan University. [[PDF]](https://arxiv.org/pdf/2104.04687.pdf) [Code Not Found]
     - Main Idea: Pre-training with 2D images for 3D point cloud to help the 3D tasks.
+    - Method: Contrast between point and pixel directly.
     <p align="center"> <img src='images/20220525_LearnFrom2D.png' align="center" height="250px"> </p>
 
     28. <u> Self-Supervised Image Representation Learning with Geometric Set Consistency (3D help 2D). CVPR 2022.</u> Chen, Nenglun, et al. The University of Hong Kong. [[PDF]](https://arxiv.org/pdf/2203.15361.pdf) [Code Not Found]
@@ -203,15 +204,29 @@
     - Take away message: Change the application domain of 2D-3D pre-training. Not interesting.
     <p align="center"> <img src='images/20220526_SimIPU.png' align="center" height="250px"> </p>
 
-    31. <u> P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding. arXiv 2020/12.</u> Li, Zhenyu, et al. Xidian University. [[PDF]](https://arxiv.org/pdf/2012.13089.pdf) [Code Not Found]
-    - Main Idea: Contrast with 
-    - Method: 
+    31. <u> P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding (2D help 3D). arXiv 2020/12.</u> Li, Zhenyu, et al. Xidian University. [[PDF]](https://arxiv.org/pdf/2012.13089.pdf) [Code Not Found]
+    - Main Idea: Point-Pixel Pair Contrast learning.
     - Take away message: 
-    <p align="center"> <img src='images/20220526_SimIPU.png' align="center" height="250px"> </p>
+        - Hard negative mining is important. Authors propose a progressive hardness increasing strategy.
+        - Under PointContrast framework, simply treating colors as additional channels of 3D points does not bring much performance boost.
+        - This work is much earlier than "Learning from 2D". However, the method is different from "Learning from 2D" which contrasts point and pixel directly.
+    <p align="center"> <img src='images/20220526_P4Contrast.png' align="center" height="250px"> </p>
 
     32. <u> Contrastive Multimodal Fusion with TupleInfoNCE. ICCV 2021.</u> Liu, Yunze, et al. Xidian University. [[PDF]](https://arxiv.org/pdf/2107.02575.pdf) [Code Not Found]
     - Main Idea: (Similar to the idea of P4Contrast) Instead of contrasting different data modalities, we propose to contrast multimodal input tuples, where each tuple element corresponds to one modality. 
     <p align="center"> <img src='images/20220526_TupleInfoNCE.png' align="center" height="250px"> </p>
+
+- **2022/05/27, Friday.** 
+    
+    33. <u> **Efficient Visual Pretraining with Contrastive Detection**. ICCV 2021.</u> J. Henaff, Olivier, et al. DeepMind, London, UK. [[PDF]](https://arxiv.org/pdf/2103.10957.pdf) [[Code]](https://github.com/deepmind/detcon)
+    - Main Idea: Contrast learning with object-level features. 
+    - Method: 
+        - How to get object-level features when pre-training? Through the use of unsupervised segmentation algorithms - Perceptual grouping.
+    - Take away message: 
+        - With object-level features, the pre-training costs is largely reduced by 10x.
+    <p align="center"> <img src='images/20220527_DetCon.png' align="center" height="250px"> </p>
+
+
 
 
 Pending...
