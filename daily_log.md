@@ -193,12 +193,25 @@
     - Take away message: The design 2D projection head matters a lot. Stacking multiple convolution layers with kernel size larger than 1 will fail due to the leak of contextual information. 
     <p align="center"> <img src='images/20220525_Image2Lidar.png' align="center" height="250px"> </p>
 
-    30. <u> SimIPU: Simple 2D Image and 3D Point Cloud Unsupervised Pre-Training for Spatial-Aware Visual Representations. AAAI 2022.</u> Sautier, Corentin, et al. valeo.ai, Paris, France. [[PDF]](https://arxiv.org/pdf/2203.16258.pdf) [[Code]](https://github.com/valeoai/SLidR)
-    - Main Idea: 
+- **2022/05/26, Thursday.** 
+
+    30. <u> SimIPU: Simple 2D Image and 3D Point Cloud Unsupervised Pre-Training for Spatial-Aware Visual Representations (2D help 3D). AAAI 2022.</u> Li, Zhenyu, et al. HIT. [[PDF]](https://arxiv.org/pdf/2112.04680.pdf) [[Code]](https://github.com/zhyever/SimIPU)
+    - Main Idea: 2D and 3D pre-training for outdoor lidar(point cloud data).
+    - Method: 
+        - Intra-modal(lidar) learning is performed by contrasting different views' features.  Use global feature other than local feature due to outdoor data is much more noise and massive.
+        - Inter-modal(lidar-2D) learning is conducted by contrast paired 2D-3D features.
+    - Take away message: Change the application domain of 2D-3D pre-training. Not interesting.
+    <p align="center"> <img src='images/20220526_SimIPU.png' align="center" height="250px"> </p>
+
+    31. <u> P4Contrast: Contrastive Learning with Pairs of Point-Pixel Pairs for RGB-D Scene Understanding. arXiv 2020/12.</u> Li, Zhenyu, et al. Xidian University. [[PDF]](https://arxiv.org/pdf/2012.13089.pdf) [Code Not Found]
+    - Main Idea: Contrast with 
     - Method: 
     - Take away message: 
-    <p align="center"> <img src='images/20220525_Image2Lidar.png' align="center" height="250px"> </p>
+    <p align="center"> <img src='images/20220526_SimIPU.png' align="center" height="250px"> </p>
 
-    31. 
+    32. <u> Contrastive Multimodal Fusion with TupleInfoNCE. ICCV 2021.</u> Liu, Yunze, et al. Xidian University. [[PDF]](https://arxiv.org/pdf/2107.02575.pdf) [Code Not Found]
+    - Main Idea: (Similar to the idea of P4Contrast) Instead of contrasting different data modalities, we propose to contrast multimodal input tuples, where each tuple element corresponds to one modality. 
+    <p align="center"> <img src='images/20220526_TupleInfoNCE.png' align="center" height="250px"> </p>
+
 
 Pending...
