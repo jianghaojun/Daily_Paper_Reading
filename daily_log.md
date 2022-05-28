@@ -220,13 +220,21 @@
     
     33. <u> **Efficient Visual Pretraining with Contrastive Detection**. ICCV 2021.</u> J. Henaff, Olivier, et al. DeepMind, London, UK. [[PDF]](https://arxiv.org/pdf/2103.10957.pdf) [[Code]](https://github.com/deepmind/detcon)
     - Main Idea: Contrast learning with object-level features. 
+    - Motivation: Although authors claim that their motivation is alleviating the computational burden of self-supervised pre-training, it might come from the promising experimental results.
     - Method: 
         - How to get object-level features when pre-training? Through the use of unsupervised segmentation algorithms - Perceptual grouping.
+        - Negative samples: different objects in the same image and different images.
     - Take away message: 
         - With object-level features, the pre-training costs is largely reduced by 10x.
+    - Cited Works:
+        - x
     <p align="center"> <img src='images/20220527_DetCon.png' align="center" height="250px"> </p>
 
-
+- **2022/05/28, Saturday.** 
+    
+    34. <u> Learning Where to Learn in Cross-View Self-Supervised Learning. CVPR 2022.</u> Huang, Lang, et al. The University of Tokyo. [[PDF]](https://arxiv.org/pdf/2203.14898.pdf) [[Code]](https://github.com/LayneH/LEWEL)
+    - Main Idea: reinterpret the global projection head in SSL as per-pixel projection predicting a set of alignment maps to adaptively aggregate spatial information for SSL. 
+    <p align="center"> <img src='images/20220528_LEWEL.png' align="center" height="250px"> </p>
 
 
 Pending...
