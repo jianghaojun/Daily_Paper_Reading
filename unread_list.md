@@ -11,10 +11,6 @@
 
 - **2022/05/25, Wednesday.**
 
-    Contrastive Learning use Region/mask/pixel-level contrastive learning.
-    1. 
-
-    1. Point-Level Region Contrast for Object Detection Pre-Training. CVPR 2022.
     1. Continual Learning of Semantic Segmentation using Complementary 2D-3D Data Representations. arXiv 2021/11 under review of ICRA 2022.
     1. Weakly-Supervised End-to-End CAD Retrieval to Scan Objects. arXiv 2022/03.
     1. Multimodal Semi-Supervised Learning for 3D Objects. BMVC 2021.

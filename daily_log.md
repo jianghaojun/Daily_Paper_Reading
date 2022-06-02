@@ -281,4 +281,16 @@
     <p align="center"> <img src='images/2022/06/20220601_FreeSOLO.png' align="center" height="250px"> </p>
 
 - **2022/06/02, Tuesday.** 
+
+    39. <u> **Point-Level Region Contrast for Object Detection Pre-Training**. CVPR 2022 **Oral**.</u> Bai, Yutong, et al. JHU, FAIR. [[PDF]](https://arxiv.org/pdf/2202.04639.pdf) [[Code]](https://github.com/NVlabs/FreeSOLO)
+    - Main Idea: 
+        - Design a point-level region contrast pre-training task which enjoys the advantanges of point-level and region-level contrast.
+    - Method: 
+    - Take away message: 
+        - Region level contrast help model to learn better features for classification.
+        - Point level contrast help model to localize the object better.
+    <p align="center"> <img src='images/2022/06/20220602_PLRContrast.png' align="center" height="250px"> </p>
+
+    <p align="center"> <img src='images/2022/06/20220602_PLRContrast2.jpg' align="center" height="250px"> </p>
+
 Pending...
