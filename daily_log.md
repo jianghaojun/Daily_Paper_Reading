@@ -261,7 +261,7 @@
 
 ### 2022/06
 
-- **2022/06/01, Tuesday.** 
+- **2022/06/01, Wednesday.** 
 
     37. <u> Region Similarity Representation Learning. ICCV 2021.</u> Xiao, Tete, et al. UC Berkeley, UC San Diego. [[PDF]](https://arxiv.org/pdf/2103.12902.pdf) [[Code]](https://github.com/Tete-Xiao/ReSim)
     - Main Idea: Except image-level contrastive learning, authors propose a region-level contrastive learning.
@@ -280,17 +280,60 @@
         - A well self-supervised pre-trained model can provide useful weak annotations.
     <p align="center"> <img src='images/2022/06/20220601_FreeSOLO.png' align="center" height="250px"> </p>
 
-- **2022/06/02, Tuesday.** 
+- **2022/06/02, Thursday.** 
 
-    39. <u> **Point-Level Region Contrast for Object Detection Pre-Training**. CVPR 2022 **Oral**.</u> Bai, Yutong, et al. JHU, FAIR. [[PDF]](https://arxiv.org/pdf/2202.04639.pdf) [[Code]](https://github.com/NVlabs/FreeSOLO)
-    - Main Idea: 
-        - Design a point-level region contrast pre-training task which enjoys the advantanges of point-level and region-level contrast.
+    39. <u> **Point-Level Region Contrast for Object Detection Pre-Training**. CVPR 2022 **Oral**.</u> Bai, Yutong, et al. JHU, FAIR. [[PDF]](https://arxiv.org/pdf/2202.04639.pdf) [Code Not Found]
+    - Main Idea: Design a point-level region contrast pre-training task which enjoys the advantanges of point-level and region-level contrast.
     - Method: 
+        - Based on the MoCo, combine with image-level contrastive learning.
+        - Divide the image into n$\times$n grid which is very possible to be a bad initialization of regions. Other spatial split strategies can be applied in this method. 
+        - Furthermore, a point-level affinity kinowledge distillation is proposed to alleviate the bad initialization of regions.
+        - Momentum encoder provide a way to bootstrap and a soft split of region. Split into n$\times$n is a hard split. 
+    - Ablations: Hard split and soft split(point affinity distillation) is both important.
     - Take away message: 
         - Region level contrast help model to learn better features for classification.
         - Point level contrast help model to localize the object better.
     <p align="center"> <img src='images/2022/06/20220602_PLRContrast.png' align="center" height="250px"> </p>
 
     <p align="center"> <img src='images/2022/06/20220602_PLRContrast2.jpg' align="center" height="250px"> </p>
+
+- **2022/06/03, Friday.** 
+
+    40. <u> DetCo: Unsupervised Contrastive Learning for Object Detection. ICCV 2021.</u> Xie, Enze, et al. HKU. [[PDF]](https://arxiv.org/pdf/2102.04803.pdf) [[Code]](https://github.com/xieenze/DetCo)
+    - Main Idea: 
+        - Multi-level supervision to intermediate representations.
+        - Contrastive learning between global image and local patches.
+    - Motivation: previous pre-training tasks designed for detection sacrifices the performance on image classification.
+    - Method: 
+        - Utilize all levels of features (Res2/3/4/5) to calculate contrastive loss.
+        - Split image into local patches and forward through the network, and then concat all local patches' features to get final local-features. And contrast with local-features or global features.
+    - Take away message: multi-level supervision is not good for image classification task but benefit detection task.
+    <p align="center"> <img src='images/2022/06/20220603_DetCo.png' align="center" height="250px"> </p>
+    
+    41. <u> Aligning pretraining for detection via object-level contrastive learning. NeurIPS 2021 Spotlight.</u> Wei, Fangyun, et al. MSRA. [[PDF]](https://arxiv.org/pdf/2106.02637.pdf) [[Code]](https://github.com/hologerry/SoCo)
+    - Main Idea: Contrastive learning is performed on object-level.
+    - Method: 
+        - Utilize selective search to generate a set of object proposals. And K-proposal are random select.
+        - Incoporate the same dedicated modules used in detection pipeline.
+    - Comparison with DetCon: Selective search is much stronger object proposal algorithm. And DetCon use a unsupervised segmentation algorithm, it perform comparable with SoCo but much better than it on segmentation.
+    <p align="center"> <img src='images/2022/06/20220603_SoCo.png' align="center" height="250px"> </p>
+
+    42. <u> Unsupervised Object-Level Representation Learning
+    from Scene Images. NeurIPS 2021.</u> Xie, Jiahao, et al. NTU. [[PDF]](https://arxiv.org/pdf/2106.11952.pdf) [[Code]](https://github.com/Jiahao000/ORL)
+    - Main Idea: Contrastive learning is performed on object-level.
+    - Motivation: image level pre-training is suboptimal for object detection task.
+    <p align="center"> <img src='images/2022/06/20220603_ORL.png' align="center" height="250px"> </p>
+
+- **2022/06/04, Saturday.** 
+
+    43. <u> Dense Siamese Network. arXiv 2022/03/21.</u> Zhang, Wenwei, et al. NTU. [[PDF]](https://arxiv.org/pdf/2203.11075.pdf) [Code Not Found]
+    - Main Idea: ?
+
+    44. <u> DETReg: Unsupervised Pretraining with Region Priors for Object Detection. CVPR 2022.</u> Bar, Amir, et al. Tel-Aviv U. [[PDF]](https://arxiv.org/pdf/2106.04550.pdf) [[Code]](https://github.com/amirbar/DETReg)
+    - Main Idea: ?
+
+    45. <u> Divide and Contrast: Self-supervised Learning from Uncurated Data. ICCV 2021.</u> Tian, Yonglong, et al. MIT. [[PDF]](https://arxiv.org/pdf/2105.08054.pdf) [Code Not Found]
+    - Main Idea: ?
+    
 
 Pending...
