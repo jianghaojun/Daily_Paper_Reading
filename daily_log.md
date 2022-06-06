@@ -326,14 +326,80 @@
 
 - **2022/06/04, Saturday.** 
 
-    43. <u> Dense Siamese Network. arXiv 2022/03/21.</u> Zhang, Wenwei, et al. NTU. [[PDF]](https://arxiv.org/pdf/2203.11075.pdf) [Code Not Found]
-    - Main Idea: ?
-
-    44. <u> DETReg: Unsupervised Pretraining with Region Priors for Object Detection. CVPR 2022.</u> Bar, Amir, et al. Tel-Aviv U. [[PDF]](https://arxiv.org/pdf/2106.04550.pdf) [[Code]](https://github.com/amirbar/DETReg)
-    - Main Idea: ?
-
-    45. <u> Divide and Contrast: Self-supervised Learning from Uncurated Data. ICCV 2021.</u> Tian, Yonglong, et al. MIT. [[PDF]](https://arxiv.org/pdf/2105.08054.pdf) [Code Not Found]
-    - Main Idea: ?
+    43. <u> Divide and Contrast: Self-supervised Learning from Uncurated Data. ICCV 2021.</u> Tian, Yonglong, et al. MIT. [[PDF]](https://arxiv.org/pdf/2105.08054.pdf) [Code Not Found]
+    - Movitation: Previous contrastive learning methods are test on curated dataset(ImageNet).In this paper, authors explore the contrastive learning on a less-curated dataset(YFCC).
+    - Problem: less-curated dataset contains many tailed classes.
+    - Main Idea: Divide the images into subset and conduct contrast learning on the subset. A subset maybe contain many different kind of dogs, conduct contrast learning on this subset can help models to learn high-level semantic knowledge about the difference between dogs.
+    <p align="center"> <img src='images/2022/06/20220604_DnC.png' align="center" height="250px"> </p>
     
+    44. <u> UniVIP: A Unified Framework for Self-Supervised Visual Pre-training. CVPR 2022.</u> Bar, Amir, et al. Tel-Aviv U. [[PDF]](https://arxiv.org/pdf/2203.06965.pdf) [Code Not Found]
+    - Motivation: Current self-supervised methods are trained on object-centric images. Most images are not this type and contain many instances.
+    - Main Idea: The framework takes into account the representation learning at three levels: 
+        1. the similarity of scene-scene, 
+        1. the correlation of scene-instance, 
+        1. the discrimination of instanceinstance.
+    <p align="center"> <img src='images/2022/06/20220604_UniVIP.png' align="center" height="250px"> </p>
+
+    45. <u> **PointContrast: Unsupervised Pre-training for 3D Point Cloud Understanding**. ECCV 2020 Spotlight.</u> Xie, Saining, et al. FAIR. [[PDF]](https://arxiv.org/pdf/2007.10985.pdf) [[Code]](https://github.com/facebookresearch/PointContrast)
+    - Motivation: Explore contrastive learning on 3D point cloud.
+    - Main Idea: Densely contrastive on point-level.
+    - Method: Pre-training on ScanNet with 870K point cloud pairs.
+    - Take away message:
+        - The pre-training on ShapeNet ***harms*** the downstream task like 3DIS semantic segmentation.
+        - Pre-training shows great potential to surpass the supervised methods on segmentation task on ScanNetV2.
+        - Compare to annotating the dataset, we might first scale-up the point cloud dataset.
+        - Contrast between two views is important for the success of PointContrast, this might due to more abundant training data.
+    <p align="center"> <img src='images/2022/06/20220604_PointContrast.png' align="center" height="250px"> </p>
+
+- **2022/06/06, Monday.** 
+
+    46. <u> Exploring Data-Efficient 3D Scene Understanding with Contrastive Scene Contexts . CVPR 2021 **Oral**.</u> Hou, Ji, Xie, Saining, et al. FAIR. [[PDF]](https://arxiv.org/pdf/2012.09165.pdf) [[Code]](https://github.com/facebookresearch/ContrastiveSceneContexts)
+    - Motivation: Explore contrastive learning on 3D point cloud <u>with limited data</u>.
+    - Drawbacks of PointContrast:
+        - Does not consider spatial contexts.
+        - Use more(> 1024) negative samples will not help the pre-training.
+    - Main Idea: Partition the space for each anchor point $i$, and contrast learning is conducted for each partition.
+
+    47. <u> Point-BERT: Pre-training 3D Point Cloud Transformers with Masked Point Modeling. CVPR 2022.</u> Yu, Xumin, et al. THU. [[PDF]](https://arxiv.org/pdf/2111.14819.pdf) [[Code]](https://github.com/lulutang0608/Point-BERT)
+    - Motivation: Masked Point Modeling (MPM).
+    - Method: 
+        - Tokenize the local point rather than a single point by a dVAE.
+        - Mask a portion of input point cloud and learn to recontruct the missing point tokens.
+        - Add **contrastive learning task** to help the Transformer to capture high-level semantic knowledge. Not pure MPM.
+    - Drawbacks: Performed on point cloud classification tasks. The area of sementic segmentation and object detection is under explore.
+    <p align="center"> <img src='images/2022/06/20220606_PointBERT.png' align="center" height="250px"> </p>
+    
+    48. <u> Masked Autoencoders for Point Cloud Self-supervised Learning. arXiv 2022/03/13. </u> Pang, Yatian, et al. NYU, PKU. [[PDF]](https://arxiv.org/pdf/2203.06604.pdf) [[Code]](https://github.com/Pang-Yatian/Point-MAE)
+    - Motivation: Design a neat and efficient Masked Point Modeling.
+    - Comparison with PointBERT: 
+        - The PointBERT has to train a dVAE model before pre-training.
+        - The PointBERT also relies on contrastive learnint task.
+    - Method: 
+        - Pure Transformer.
+        - Problem: Positional embeddings for mask tokens lead to leakage of location information
+            - Solution: Shift the mask tokens from the input of encoder to the input of decoder. Two benefits:
+                - Save computation since the number of tokens is decrease.
+                - Alleviate the leakage of location information.
+        - Problem: The information density distribution is uneven. Many point contain redundant information (*e.g.*, points on a flat surface).
+            - Solution: Random masking at a high ratio(60%-80%) works well.
+        - Objective: Recontruct the coordinates of masked points.
+        - Loss: **$l_2$ Chamfer Distance**.
+    - Take away message:
+        - The information distribution in a point cloud sample is uneven. In other words, the points with sharp corners or edges contain more information than the point on a flat surface.
+    <p align="center"> <img src='images/2022/06/20220606_PointMAE.png' align="center" height="250px"> </p>
+
+
+
+    
+
+    xx. Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds
+
+    MAE for Point Cloud
+    xx. Masked autoencoders for point cloud self-supervised learning
+    xx. Self-Supervised Point Cloud Representation Learning with Occlusion Auto-Encoder
+    xx. Point-M2AE: Multi-scale Masked Autoencoders for Hierarchical Point Cloud Pre-training
+    xx. POS-BERT: Point Cloud One-Stage BERT Pre-Training
+
+
 
 Pending...
