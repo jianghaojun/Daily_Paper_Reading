@@ -388,7 +388,29 @@
         - The information distribution in a point cloud sample is uneven. In other words, the points with sharp corners or edges contain more information than the point on a flat surface.
     <p align="center"> <img src='images/2022/06/20220606_PointMAE.png' align="center" height="250px"> </p>
 
+- **2022/06/07, Monday.** 
 
+    49. <u> POS-BERT: Point Cloud One-Stage BERT Pre-Training. arXiv 2022/04/03.</u> Fu, Kexue, et al. Fudan U, Shanghai AI Lab. [[PDF]](https://arxiv.org/pdf/2204.00989.pdf) [[Code]](https://github.com/fukexue/POS-BERT)
+    - Motivation: Masked Point Modeling (MPM).
+    - Method: 
+        - Adopt a momentum encoder as the Tokenizer.
+        - Following the Point-BERT, add **contrastive learning task** to help the Transformer to capture high-level semantic knowledge. Not pure MPM.
+    - Drawbacks: It is not clear how much of a role the proposed MPM played
+    <p align="center"> <img src='images/2022/06/20220607_POSBERT.png' align="center" height="250px"> </p>
+    <p align="center"> <img src='images/2022/06/20220607_comparison.png' align="center" height="250px"> </p>
+
+    50. <u> Point-M2AE: Multi-scale Masked Autoencoders for Hierarchical Point Cloud Pre-training. arXiv 2022/05/28.</u> Fu, Kexue, et al. Fudan U, Shanghai AI Lab. [[PDF]](https://arxiv.org/pdf/2205.14401.pdf) [[Code]](https://github.com/ZrrSkywalker/Point-M2AE)
+    - Motivation: Masked Point Modeling (MPM).
+    - Method: 
+        - Multi-scale idea.
+    <p align="center"> <img src='images/2022/06/20220607_PointM2AE.png' align="center" height="250px"> </p>
+
+    51. <u> Self-Supervised Point Cloud Representation
+    Learning with Occlusion Auto-Encoder. arXiv 2022/05/28.</u> Fu, Kexue, et al. Fudan U, Shanghai AI Lab. [[PDF]](https://arxiv.org/pdf/2205.14401.pdf) [[Code]](https://github.com/ZrrSkywalker/Point-M2AE)
+    - Motivation: Masked Point Modeling (MPM).
+    - Method: 
+        - Multi-scale idea.
+    <p align="center"> <img src='images/2022/06/20220607_PointM2AE.png' align="center" height="250px"> </p>
 
     
 
