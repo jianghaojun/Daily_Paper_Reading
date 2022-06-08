@@ -388,7 +388,7 @@
         - The information distribution in a point cloud sample is uneven. In other words, the points with sharp corners or edges contain more information than the point on a flat surface.
     <p align="center"> <img src='images/2022/06/20220606_PointMAE.png' align="center" height="250px"> </p>
 
-- **2022/06/07, Monday.** 
+- **2022/06/07, Tuesday.** 
 
     49. <u> POS-BERT: Point Cloud One-Stage BERT Pre-Training. arXiv 2022/04/03.</u> Fu, Kexue, et al. Fudan U, Shanghai AI Lab. [[PDF]](https://arxiv.org/pdf/2204.00989.pdf) [[Code]](https://github.com/fukexue/POS-BERT)
     - Motivation: Masked Point Modeling (MPM).
@@ -412,7 +412,36 @@
         - Multi-scale idea.
     <p align="center"> <img src='images/2022/06/20220607_PointM2AE.png' align="center" height="250px"> </p>
 
-    
+- **2022/06/08, Wednesday.** 
+
+    52. <u> VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training. arXiv 2022/03/23.</u> Tong, Zhan, Wang, Limin, et al. NJU. [[PDF]](https://arxiv.org/pdf/2203.12602.pdf) [[Code]](https://github.com/MCG-NJU/VideoMAE)
+    - Motivation: Masked Video AutoEncoder.
+    - Method: 
+        - Tube masking which masks or keeps a spatial position in all time steps.
+    - Take away message:
+        - VideoMAE is a data-efficient learner which can be trained with only 3.5k videos.
+        - Video is quite redundant. Thus, extremely high proportion of masking ratio (*i.e.*, 90% to 95%) still yields favorable performance.
+        - VideoMAE shows that data quality is more important than quantity for SSVP when there exists a domain shift between source and target dataset.
+
+    53. <u> Masked Autoencoders Are Scalable Vision Learners. CVPR 2022 **Oral**.</u> He, Kaiming, et al. FAIR. [[PDF]](https://arxiv.org/pdf/2111.06377.pdf) [[Code]](https://github.com/facebookresearch/mae)
+    - Motivation: Masked Image AutoEncoder.
+    - Method: 
+        - An asymmetric encoder-decoder architecture.
+            - The decoder is lightweight.
+            - The mask token is only input at decoder. This design greatly reduce the computational cost.
+        - Mask the image at a very high proportion, *e.g.*, 75%.
+        - After pre-training, the decoder is discarded and the encoder is applied to uncorrupted images (full sets of patches) for recognition tasks.
+        - Reconstruction target: predict the pixel value of masked patches with MSE loss.
+    - Take away message:
+        - The features learned by MAE are less linearly separable.
+    <p align="center"> <img src='images/2022/06/20220608_MAE.png' align="center" height="250px"> </p>
+
+
+    54. <u> Masked Autoencoders As Spatiotemporal Learners. arXiv 2022/05/28.</u> He, Kaiming, et al. FAIR. [[PDF]](https://arxiv.org/pdf/2205.09113.pdf) [[Code]](https://github.com/ZrrSkywalker/Point-M2AE)
+    - Motivation: Masked Point Modeling (MPM).
+    - Method: 
+        - Multi-scale idea.
+    <p align="center"> <img src='images/2022/06/20220607_PointM2AE.png' align="center" height="250px"> </p>
 
     xx. Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds
 
