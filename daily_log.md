@@ -378,8 +378,8 @@
         - Pure Transformer.
         - Problem: Positional embeddings for mask tokens lead to leakage of location information
             - Solution: Shift the mask tokens from the input of encoder to the input of decoder. Two benefits:
-                - Save computation since the number of tokens is decrease.
-                - Alleviate the leakage of location information.
+                - Save computation since the number of tokens is decrease. Follow MAE.
+                - Alleviate the leakage of location information. Follow MAE.
         - Problem: The information density distribution is uneven. Many point contain redundant information (*e.g.*, points on a flat surface).
             - Solution: Random masking at a high ratio(60%-80%) works well.
         - Objective: Recontruct the coordinates of masked points.
@@ -436,12 +436,58 @@
         - The features learned by MAE are less linearly separable.
     <p align="center"> <img src='images/2022/06/20220608_MAE.png' align="center" height="250px"> </p>
 
+- **2022/06/10, Friday.** 
 
-    54. <u> Masked Autoencoders As Spatiotemporal Learners. arXiv 2022/05/28.</u> He, Kaiming, et al. FAIR. [[PDF]](https://arxiv.org/pdf/2205.09113.pdf) [[Code]](https://github.com/ZrrSkywalker/Point-M2AE)
-    - Motivation: Masked Point Modeling (MPM).
+    54. <u> Masked Autoencoders As Spatiotemporal Learners. arXiv 2022/05/28.</u> He, Kaiming, et al. FAIR. [[PDF]](https://arxiv.org/pdf/2205.09113.pdf) [Code Not Found]
+    - Motivation: Masked Video Modeling.
+    - Method: The same as MAE.
+    - Take away message:
+        - The higher masking ratio makes pre-training faster.
+        - Random masking is better than space-only masking strategy.
+        - Pre-train with MAE first and then finetune will get much better results compared to training from scratch.
+        - Stronger data augmentation might harm the performance.
+    <p align="center"> <img src='images/2022/06/20220610_MAE.png' align="center" height="250px"> </p>
+
+- **2022/06/13, Monday.** 
+
+    55. <u> Multimodal Contrastive Learning with LIMoE: the Language-Image Mixture of Experts. arXiv 2022/06/06.</u> Mustafa, Basil, et al. Google Brain. [[PDF]](https://arxiv.org/pdf/2206.02770.pdf) [Code Not Found]
+    - Motivation: LIMoE, the first large-scale multimodal mixture of experts models.W
+    - Method: The overall model is show in below figure. 
+        - Challenges for single modality MoEs: If without any intervention, the router tend to select only one expert rather than TOP-*K* experts.
+        - New challenges for multi-modality MoEs: Inbalance number of different modality, in LIMoE, authors do not enforce balanced data across modalities.
+        - To stablize the training, authors propose a local and global entropy loss.
+    - Take away message: Two-tower toward one-tower architecture.
+    <p align="center"> <img src='images/2022/06/20220613_LIMoE.png' align="center" height="250px"> </p>
+
+- **2022/06/14, Tuesday.** 
+
+    55. <u> SimMIM: a Simple Framework for Masked Image Modeling. CVPR 2022.</u> Xie, Zhenda, et al. MSRA. [[PDF]](https://arxiv.org/pdf/2111.09886) [[Code]](https://github.com/microsoft/SimMIM)
+    - Motivation: Masked Image Modeling.
     - Method: 
-        - Multi-scale idea.
-    <p align="center"> <img src='images/2022/06/20220607_PointM2AE.png' align="center" height="250px"> </p>
+        - Different from the MAE, the masked tokens are inputted into encoder.
+    - Take away message: 
+        - Random masking is the best masking strategy.
+        - This pretext task can alleviate the data hungry issue faced with large-scale model, *i.e.*, pre-training model with billion parameters on small dataset(ImageNet-22K).
+    <p align="center"> <img src='images/2022/06/20220614_SimMIM.png' align="center" height="250px"> </p>
+
+    56. <u> Masked Unsupervised Self-training for Zero-shot Image Classification. arXiv 2022/06/07.</u> Li, Junnan, et al. Salesforce. [[PDF]](https://arxiv.org/pdf/2206.02967.pdf) [[Code]](https://github.com/salesforce/MUST)
+    - Motivation: Improving the zero-shot ability of CLIP by EMA self-training and MIM.
+    - Method: 
+        - Global supervision: self-training with EMA teacher which provides global pseudo-supervision on *CLS* token.
+        - Local supervision: MIM.
+        - Global local alignment: bridge the knowledge learned from two sources of supervision.
+    - Take away message: Self-training with an EMA teacher is very effective.
+    <p align="center"> <img src='images/2022/06/20220614_MUST.png' align="center" height="250px"> </p>
+
+    57. <u> Siamese Image Modeling for Self-Supervised Vision Representation Learning. arXiv 2022/06/02.</u> Tao, Chenxin, et al. THU, SenseTime. [[PDF]](https://arxiv.org/pdf/2206.01204.pdf) [Code Not Found]
+    - Motivation: Incorporating instance-level(global) with pixel-level(local) self-supervised training.
+    - Method: 
+        - MIM is performed inside one image with two views.
+        - EMA online model provides target.
+    - Take away message: 
+        - Instance-level self-supervised training can improve the linear separablity of feature.
+        - Under MAE, linear probing might not be a sole metric for evaluating representation quality.
+    <p align="center"> <img src='images/2022/06/20220614_SIM.png' align="center" height="250px"> </p>
 
     xx. Spatio-temporal Self-Supervised Representation Learning for 3D Point Clouds
 
@@ -451,6 +497,6 @@
     xx. Point-M2AE: Multi-scale Masked Autoencoders for Hierarchical Point Cloud Pre-training
     xx. POS-BERT: Point Cloud One-Stage BERT Pre-Training
 
-
+d
 
 Pending...
